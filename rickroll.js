@@ -1,3 +1,12 @@
- audio = new Audio("http://www.here-and-now.info/audio/rickastley_artists.mp3");
-audio.loop = true;
-audio.play();
+ function getRickrolled(callback) {
+    var promise = new Promise((resolve) => {
+        setTimeout(() => resolve("http://www.youtube.com/watch?v=dQw4w9WgXcQ"), 1000)
+    })
+    promise.then(callback)
+    return promise
+}
+getRickrolled(function (rickroll) {
+    console.log("Callback: " + rickroll)
+}).then(function (rickroll) {
+    console.log("Promise: " + rickroll)
+})
