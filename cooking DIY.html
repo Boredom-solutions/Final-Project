@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		var videos = ["https://www.youtube.com/watch?v=kx0mSXZgtbM","https://www.youtube.com/watch?v=rto7kdXxYY0","https://www.youtube.com/watch?v=ifyQoFQv3rI"];
+
+		window.onload = function() {
+			var playerDiv = document.getElementById("random_player");
+            var player = document.createElement("IFRAME");
+            var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
+            player.setAttribute('width', '100%');
+            player.setAttribute('height', '650');
+            player.setAttribute('src', randomVideoUrl);
+
+            playerDiv.appendChild(player);
+        };
+	
+	</script>
+</head>
+<body>
+	<h1> These are some DIV ways for kitchen </h1>
+	<div id = "random_player"/>
+
+</body>
+</html>
